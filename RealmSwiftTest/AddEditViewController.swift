@@ -14,6 +14,13 @@ class AddEditViewController: UIViewController
     @IBOutlet weak var textField:UITextField!
     
     var testObject:TestObject?
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let testObject = testObject {
+            textField.text = testObject.name
+        }
+    }
 }
 
 extension AddEditViewController
