@@ -33,7 +33,7 @@ class ViewController: UIViewController
             where identifier == "edit"
         {                
                 let editVC:AddEditViewController = segue.destinationViewController as! AddEditViewController
-                editVC.testObject = TestObject(object: objects[UInt(indexPath.row)])
+                editVC.testObject = objects[UInt(indexPath.row)] as! TestObject?
         }
     }
     
